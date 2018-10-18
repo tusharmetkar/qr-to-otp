@@ -10,7 +10,7 @@ module QrToOtp
 
     # @param [String] image either base64 encoded string or QR image in png format. 
     # @option Various options are accepted as REFRESH_PERIOD, DIGIT_LENGTH, PADDING_LENGTH, DIGEST_TYPE
-    # @returns Auth Code instantiation
+    # @returns Auth Code instantiation 
     def initialize(image, options = {})
       @qr_image = image
       @refresh_period = options[:refresh_period] || REFRESH_PERIOD
