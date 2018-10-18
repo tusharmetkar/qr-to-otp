@@ -54,7 +54,7 @@ describe 'Verify image to auth code with and without encryption' do
     	local_device_id = MacAddress.address.split(':')
 	    auth = QrToOtp::OTP.new(image, {:device_identity => local_device_id[0]+local_device_id[1]+local_device_id[2]})
 	    if auth.otpauth.empty?
-	    	puts "\nDevice Authentication failure !!\n"
+	    	puts "\nDevice Authentication failure !! \n"
 	    end
 	  end
 	end
