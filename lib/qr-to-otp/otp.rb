@@ -8,7 +8,7 @@ module QrToOtp
     DIGEST_TYPE = "SHA1"
     PADDING_LENGTH = 8
 
-    # @param [String] image either base64 encoded string or QR image in png format.
+    # @param [String] image either base64 encoded string or QR image in png format. 
     # @option Various options are accepted as REFRESH_PERIOD, DIGIT_LENGTH, PADDING_LENGTH, DIGEST_TYPE
     # @returns Auth Code instantiation
     def initialize(image, options = {})
