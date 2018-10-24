@@ -41,11 +41,11 @@ module QrToOtp
 		   	data_offset = hash_mac.bytes.last & 0xf
 		    data = hash_mac.bytes[data_offset..data_offset + 3]
   			data[0] = data[0] & 0x7f
-			  has_mac_code = (data[0] << 24) + 
+			  hash_mac_code = (data[0] << 24) + 
 			  		(data[1] << 16) + 
 				  	(data[2] << 8) + 
 				  	data[3]
-        return (has_mac_code % 10 ** @digits_length).to_s.rjust(@digits_length, '0')
+        return (hash_mac_code % 10 ** @digits_length).to_s.rjust(@digits_length, '0')
 	    else
     		return 'FAILURE'
 	    end
@@ -78,6 +78,7 @@ module QrToOtp
 		  end
 		end
 
+		#Convert QR image to otpauth URL
 		def qr_image_to_otpauth()
 		  qr_code_to_qr_image()
 		  otpauth = Hash.new("")
