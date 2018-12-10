@@ -51,7 +51,7 @@ describe 'Verify image to auth code with and without encryption' do
 	  	#otpauth://totp/Local:<mac-address without colon like 186590>?secret=XQLY4T5X7M7MLCJ4&issuer=Local
 	  	#e.g. otpauth://totp/lc:186590?secret=XQLY4T5X7M7MLCJ4&issuer=lc 
     	image = File.join(File.dirname(__FILE__), '../fixtures/local-qr-code.png')
-    	local_device_id = MacAddress.address.split(':')
+    	local_device_id = MacAddr.address.split(':')
 	    auth = QrToOtp::OTP.new(image, {:device_identity => local_device_id[0]+local_device_id[1]+local_device_id[2]})
 	    if auth.otpauth.empty?
 	    	puts "\nDevice Authentication failure !! \n"

@@ -6,7 +6,7 @@ A Ruby library for generating Google Authenticator time based password, based on
 ## Dependencies
 
 * OpenSSL
-* Ruby 1.9.3 or higher
+* Ruby 2.3.0 or higher
 * Qrio 
 
 ## Installation

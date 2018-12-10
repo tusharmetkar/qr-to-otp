@@ -1,5 +1,4 @@
 require 'openssl'
-require 'mac-address'
 require 'base32'
 require 'base64'
 require 'qrio'
